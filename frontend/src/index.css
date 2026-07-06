@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #0f1115;
+  color: #e6e6e6;
+}
+
+.app {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+}
+
+header h1 {
+  margin-bottom: 0.25rem;
+  font-size: 1.8rem;
+}
+
+.subtitle {
+  color: #9aa0a6;
+  margin-top: 0;
+}
+
+.shorten-form {
+  display: flex;
+  gap: 0.5rem;
+  margin: 2rem 0;
+}
+
+.shorten-form input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #2a2d34;
+  background: #1a1d24;
+  color: #e6e6e6;
+  font-size: 1rem;
+}
+
+.shorten-form button,
+.link-item button {
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  border: none;
+  background: #4f7cff;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.shorten-form button:disabled {
+  background: #3a3f4b;
+  cursor: not-allowed;
+}
+
+.error-text {
+  color: #ff6b6b;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.link-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.link-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  background: #1a1d24;
+  border: 1px solid #2a2d34;
+  cursor: pointer;
+}
+
+.link-item.selected {
+  border-color: #4f7cff;
+}
+
+.link-item-main {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.short-url {
+  font-weight: 600;
+  color: #7fa4ff;
+}
+
+.long-url {
+  font-size: 0.85rem;
+  color: #9aa0a6;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.empty-state {
+  color: #6b7078;
+}
+
+.analytics-panel {
+  background: #1a1d24;
+  border: 1px solid #2a2d34;
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.total-clicks {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #4f7cff;
+}
+
+.click-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+}
+
+.click-list li {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #2a2d34;
+  padding-bottom: 0.4rem;
+}
+
+.referrer {
+  color: #9aa0a6;
+}
+
+@media (max-width: 640px) {
+  .main-grid {
+    grid-template-columns: 1fr;
+  }
+}
